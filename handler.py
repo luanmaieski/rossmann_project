@@ -17,7 +17,7 @@ def rossmann_predict():
     if test_json: #there is data
         
         if isinstance( test_json, dict ):  # unique exemple
-            test_raw = pd.DataFrame( test_json, index[0] )
+            test_raw = pd.DataFrame( test_json, index=[0] )
         else:  # multiple exemples
             test_raw = pd.DataFrame( test_json, columns=test_json[0].keys() )
         
